@@ -6,9 +6,9 @@ import org.junit.Test;
 
 public class MyListUtilTest
 {
-	 @Test
-	 public void shouldAnswerWithTrue()
-	 {
-	     assertTrue(true);
-	 }
+	@Test
+	public void shouldAnswerWithTrue()
+	{
+	    assertTrue(true);
+	}
 }
