@@ -9,6 +9,6 @@ public class MyListUtilTest
 	 @Test
 	 public void shouldAnswerWithTrue()
 	 {
-	     assertTrue( true );
+	     assertTrue(true);
 	 }
 }
