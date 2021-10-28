@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.joda.time.DateTime;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -58,6 +59,9 @@ public class MyListUtilTest
 	@Test //testa la correttezza dell'ordinamento ascendente
 	public void AscendenteTest()
 	{
+		//stampa la data ed ora di inizio del test
+		System.out.println(dateTime.toDateTime());
+		
 		//chiama la funzione di ordinamento in maniera ascendente sulla nostra lista di test
 		listTest = myListUtil.sort(listTest, 0);
 		
@@ -67,11 +71,17 @@ public class MyListUtilTest
 			//controlla che i risultati ottenuti, siano uguali a quelli aspettati
 			assertEquals(listAscendenteExpected.get(i), listTest.get(i));
 		}
+		
+		//stampa la data ed ora della fine del test
+		System.out.println(dateTime.toDateTime());
 	}
 	
 	@Test //testa la correttezza dell'ordinamento discendente
 	public void DiscendenteTest()
 	{
+		//stampa la data ed ora di inizio del test
+		System.out.println(dateTime.toDateTime());
+		
 		//chiama la funzione di ordinamento in maniera discendente sulla nostra lista di test
 		listTest = myListUtil.sort(listTest, 1);
 		
@@ -81,6 +91,9 @@ public class MyListUtilTest
 			//controlla che i risultati ottenuti, siano uguali a quelli aspettati
 			assertEquals(listDiscendenteExpected.get(i), listTest.get(i));
 		}
+		
+		//stampa la data ed ora della fine del test
+		System.out.println(dateTime.toDateTime());
 	}
 	
 	//campi
@@ -88,4 +101,5 @@ public class MyListUtilTest
 	private List<Integer> listTest = new ArrayList<Integer>(); //lista che inizializziamo disordinata e poi ordiniamo, per test
 	private static List<Integer> listAscendenteExpected = new ArrayList<Integer>(); //lista già ordinata nel modo in cui ci aspettiamo venga ordinata tramite la funzione sort ascendente
 	private static List<Integer> listDiscendenteExpected = new ArrayList<Integer>(); //lista già ordinata nel modo in cui ci aspettiamo venga ordinata tramite la funzione sort discendente
+	private DateTime dateTime = new DateTime(); //DateTime per stampare l'ora e data di inizio e fine, di ogni test
 }
